@@ -40,6 +40,7 @@ namespace eOrganicShop.WinUI.Transakcije
             this.KorisnikID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cbKorisnici = new System.Windows.Forms.ComboBox();
             this.btnUkloni = new System.Windows.Forms.Button();
+            this.btnIzvjestaj = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTransakcije)).BeginInit();
             this.SuspendLayout();
             // 
@@ -150,10 +151,22 @@ namespace eOrganicShop.WinUI.Transakcije
             this.btnUkloni.UseVisualStyleBackColor = false;
             this.btnUkloni.Click += new System.EventHandler(this.btnUkloni_Click);
             // 
+            // btnIzvjestaj
+            // 
+            this.btnIzvjestaj.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.btnIzvjestaj.Location = new System.Drawing.Point(756, 41);
+            this.btnIzvjestaj.Name = "btnIzvjestaj";
+            this.btnIzvjestaj.Size = new System.Drawing.Size(167, 35);
+            this.btnIzvjestaj.TabIndex = 12;
+            this.btnIzvjestaj.Text = "Napravi izvjestaj";
+            this.btnIzvjestaj.UseVisualStyleBackColor = false;
+            this.btnIzvjestaj.Click += new System.EventHandler(this.btnIzvjestaj_Click);
+            // 
             // TransakcijeList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnIzvjestaj);
             this.Controls.Add(this.btnUkloni);
             this.Controls.Add(this.cbKorisnici);
             this.Controls.Add(this.dgvTransakcije);
@@ -181,5 +194,6 @@ namespace eOrganicShop.WinUI.Transakcije
         private System.Windows.Forms.DataGridViewTextBoxColumn BrojNarudzbe;
         private System.Windows.Forms.DataGridViewTextBoxColumn NarudzbaID;
         private System.Windows.Forms.DataGridViewTextBoxColumn KorisnikID;
+        private System.Windows.Forms.Button btnIzvjestaj;
     }
 }

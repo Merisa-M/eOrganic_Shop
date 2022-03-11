@@ -99,8 +99,9 @@ namespace eOrganicShop.WinUI.Transakcije
 
         }
 
-        
-    
-    
+        private void btnIzvjestaj_Click(object sender, EventArgs e)
+        {
+            PanelHelper.SwapPanels(this.Parent, this, new TranksacijeIzvjestaj(dgvTransakcije.DataSource as List<Model.Transakcije>));
+        }
     }
 }
