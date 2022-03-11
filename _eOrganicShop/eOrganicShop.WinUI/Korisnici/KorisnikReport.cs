@@ -22,6 +22,7 @@ namespace eOrganicShop.WinUI.Korisnici
 
         private void KorisnikReport_Load(object sender, EventArgs e)
         {
+
             KorisnikListVMBindingSource.DataSource = _source;
             this.reportViewer1.RefreshReport();
         }
@@ -29,6 +30,7 @@ namespace eOrganicShop.WinUI.Korisnici
         private void reportViewer1_Load(object sender, EventArgs e)
         {
 
+  
         }
     }
 }

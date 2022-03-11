@@ -183,12 +183,6 @@
     <Compile Include="Transakcije\TransakcijeList.Designer.cs">
       <DependentUpon>TransakcijeList.cs</DependentUpon>
     </Compile>
-    <Compile Include="VrsteProizvoda\ProizvodiPoVrsti.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="VrsteProizvoda\ProizvodiPoVrsti.Designer.cs">
-      <DependentUpon>ProizvodiPoVrsti.cs</DependentUpon>
-    </Compile>
     <Compile Include="VrsteProizvoda\vrsteProizvodaAdd.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -209,7 +203,6 @@
     </Compile>
     <EmbeddedResource Include="Izvjestaji\KorisnikReport.rdlc" />
     <EmbeddedResource Include="Izvjestaji\ProizvodiIzvjestaj.rdlc" />
-    <EmbeddedResource Include="Izvjestaji\ProizvodiPoVrstiReport.rdlc" />
     <EmbeddedResource Include="Korisnici\KorisniciList.resx">
       <DependentUpon>KorisniciList.cs</DependentUpon>
     </EmbeddedResource>
@@ -261,9 +254,6 @@
     </Compile>
     <EmbeddedResource Include="Transakcije\TransakcijeList.resx">
       <DependentUpon>TransakcijeList.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="VrsteProizvoda\ProizvodiPoVrsti.resx">
-      <DependentUpon>ProizvodiPoVrsti.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VrsteProizvoda\vrsteProizvodaAdd.resx">
       <DependentUpon>vrsteProizvodaAdd.cs</DependentUpon>

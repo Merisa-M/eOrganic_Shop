@@ -30,27 +30,27 @@ namespace eOrganicShop.WinUI.Proizvodi
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.rptProizvodi = new Microsoft.Reporting.WinForms.ReportViewer();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.ProizvodiListVMBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.rptProizvodi = new Microsoft.Reporting.WinForms.ReportViewer();
             ((System.ComponentModel.ISupportInitialize)(this.ProizvodiListVMBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
+            // ProizvodiListVMBindingSource
+            // 
+            this.ProizvodiListVMBindingSource.DataSource = typeof(eOrganicShop.Model.ViewModel.ProizvodiListVM);
+            // 
             // rptProizvodi
             // 
-            reportDataSource2.Name = "ProizvodiDataSet";
-            reportDataSource2.Value = this.ProizvodiListVMBindingSource;
-            this.rptProizvodi.LocalReport.DataSources.Add(reportDataSource2);
-            this.rptProizvodi.LocalReport.ReportEmbeddedResource = "eOrganicShop.WinUI.Izvještaji.ProizvodiIzvjestaj.rdlc";
+            reportDataSource1.Name = "ProizvodiDataSet";
+            reportDataSource1.Value = this.ProizvodiListVMBindingSource;
+            this.rptProizvodi.LocalReport.DataSources.Add(reportDataSource1);
+            this.rptProizvodi.LocalReport.ReportEmbeddedResource = "eOrganicShop.WinUI.Izvjestaji.ProizvodiIzvjestaj.rdlc";
             this.rptProizvodi.Location = new System.Drawing.Point(0, 0);
             this.rptProizvodi.Name = "rptProizvodi";
             this.rptProizvodi.ServerReport.BearerToken = null;
             this.rptProizvodi.Size = new System.Drawing.Size(895, 411);
             this.rptProizvodi.TabIndex = 0;
-            // 
-            // ProizvodiListVMBindingSource
-            // 
-            this.ProizvodiListVMBindingSource.DataSource = typeof(eOrganicShop.Model.ViewModel.ProizvodiListVM);
             // 
             // ProizvodiReport
             // 

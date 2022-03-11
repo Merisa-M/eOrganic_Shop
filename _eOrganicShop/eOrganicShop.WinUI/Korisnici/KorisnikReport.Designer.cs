@@ -45,7 +45,7 @@ namespace eOrganicShop.WinUI.Korisnici
             reportDataSource1.Name = "KorisnikDataSet";
             reportDataSource1.Value = this.KorisnikListVMBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "eOrganicShop.WinUI.Izvještaji.KorisnikReport.rdlc";
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "eOrganicShop.WinUI.Izvjestaji.KorisnikReport.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(37, 21);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
