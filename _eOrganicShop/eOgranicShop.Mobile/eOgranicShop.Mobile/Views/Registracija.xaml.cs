@@ -130,36 +130,56 @@ namespace eOgranicShop.Mobile.Views
 
 
         }
-
-        private void email_unfocused(object sender, System.EventArgs e)
-        {
-            if (string.IsNullOrEmpty(Email.Text))
-            {
-                ErrorLabel_Email.IsVisible = true;
-                ErrorLabel_Email.Text = "Polje je obavezno";
-            }
-            else
-            {
-                ErrorLabel_Email.IsVisible = false;
-
-
-            }
-
-        }
         private void email_changed(object sender, System.EventArgs e)
         {
             if (string.IsNullOrEmpty(Email.Text))
             {
                 ErrorLabel_Email.IsVisible = true;
-                ErrorLabel_Email.Text = "Polje je obavezno";
+                ErrorLabel_Email.Text = "Email je obavezan!";
             }
             else
             {
                 ErrorLabel_Email.IsVisible = false;
-
             }
-
-
+            if (Email.Text != null)
+            {
+                bool isValid = Regex.IsMatch(Email.Text, emailPattern);
+                if (!isValid)
+                {
+                    ErrorLabel_Email.IsVisible = true;
+                    ErrorLabel_Email.Text = "Nije u validnom formatu!";
+                }
+                else
+                {
+                    ErrorLabel_Email.IsVisible = false;
+                }
+            }
+        }
+      
+        private void email_unfocused(object sender, System.EventArgs e)
+        {
+            if (string.IsNullOrEmpty(Email.Text))
+            {
+                ErrorLabel_Email.IsVisible = true;
+                ErrorLabel_Email.Text = "Email je obavezan!";
+            }
+            else
+            {
+                ErrorLabel_Email.IsVisible = false;
+            }
+            if (Email.Text != null)
+            {
+                bool isValid = Regex.IsMatch(Email.Text, emailPattern);
+                if (!isValid)
+                {
+                    ErrorLabel_Email.IsVisible = true;
+                    ErrorLabel_Email.Text = "U porgresnom formatu!";
+                }
+                else
+                {
+                    ErrorLabel_Email.IsVisible = false;
+                }
+            }
         }
 
         private void telefon_unfocused(object sender, EventArgs e)
