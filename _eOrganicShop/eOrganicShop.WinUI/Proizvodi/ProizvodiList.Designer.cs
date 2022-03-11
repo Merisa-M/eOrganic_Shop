@@ -32,16 +32,17 @@ namespace eOrganicShop.WinUI.Proizvodi
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvProizvodi = new System.Windows.Forms.DataGridView();
-            this.ProizvodID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NazivProizvoda = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Sifra = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cijena = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Opis = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtPretragaProizvoda = new System.Windows.Forms.TextBox();
             this.btnPretragaProizvoda = new System.Windows.Forms.Button();
             this.btnDodaj = new System.Windows.Forms.Button();
             this.btnUredi = new System.Windows.Forms.Button();
             this.btnUkloni = new System.Windows.Forms.Button();
+            this.btnReportProizvodi = new System.Windows.Forms.Button();
+            this.ProizvodID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NazivProizvoda = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Sifra = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cijena = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Opis = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProizvodi)).BeginInit();
             this.SuspendLayout();
             // 
@@ -79,13 +80,86 @@ namespace eOrganicShop.WinUI.Proizvodi
             this.dgvProizvodi.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvProizvodi.GridColor = System.Drawing.SystemColors.ControlDarkDark;
             this.dgvProizvodi.Location = new System.Drawing.Point(81, 81);
-            this.dgvProizvodi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvProizvodi.Margin = new System.Windows.Forms.Padding(4);
             this.dgvProizvodi.Name = "dgvProizvodi";
             this.dgvProizvodi.ReadOnly = true;
             this.dgvProizvodi.RowHeadersWidth = 51;
             this.dgvProizvodi.Size = new System.Drawing.Size(809, 321);
             this.dgvProizvodi.TabIndex = 1;
             this.dgvProizvodi.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProizvodi_CellContentClick);
+            // 
+            // txtPretragaProizvoda
+            // 
+            this.txtPretragaProizvoda.Location = new System.Drawing.Point(81, 49);
+            this.txtPretragaProizvoda.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPretragaProizvoda.Name = "txtPretragaProizvoda";
+            this.txtPretragaProizvoda.Size = new System.Drawing.Size(164, 22);
+            this.txtPretragaProizvoda.TabIndex = 2;
+            this.txtPretragaProizvoda.Enter += new System.EventHandler(this.txtPretragaProizvoda_Enter);
+            this.txtPretragaProizvoda.Leave += new System.EventHandler(this.txtPretragaProizvoda_Leave);
+            // 
+            // btnPretragaProizvoda
+            // 
+            this.btnPretragaProizvoda.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnPretragaProizvoda.Location = new System.Drawing.Point(255, 49);
+            this.btnPretragaProizvoda.Margin = new System.Windows.Forms.Padding(4);
+            this.btnPretragaProizvoda.Name = "btnPretragaProizvoda";
+            this.btnPretragaProizvoda.Size = new System.Drawing.Size(97, 25);
+            this.btnPretragaProizvoda.TabIndex = 3;
+            this.btnPretragaProizvoda.Text = "Traži";
+            this.btnPretragaProizvoda.UseVisualStyleBackColor = true;
+            this.btnPretragaProizvoda.Click += new System.EventHandler(this.btnPretragaProizvoda_Click);
+            // 
+            // btnDodaj
+            // 
+            this.btnDodaj.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnDodaj.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnDodaj.Location = new System.Drawing.Point(689, 410);
+            this.btnDodaj.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDodaj.Name = "btnDodaj";
+            this.btnDodaj.Size = new System.Drawing.Size(59, 46);
+            this.btnDodaj.TabIndex = 7;
+            this.btnDodaj.Text = "Dodaj";
+            this.btnDodaj.UseVisualStyleBackColor = false;
+            this.btnDodaj.Click += new System.EventHandler(this.btnDodaj_Click);
+            // 
+            // btnUredi
+            // 
+            this.btnUredi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnUredi.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnUredi.Location = new System.Drawing.Point(756, 410);
+            this.btnUredi.Margin = new System.Windows.Forms.Padding(4);
+            this.btnUredi.Name = "btnUredi";
+            this.btnUredi.Size = new System.Drawing.Size(60, 46);
+            this.btnUredi.TabIndex = 8;
+            this.btnUredi.Text = "Uredi";
+            this.btnUredi.UseVisualStyleBackColor = false;
+            this.btnUredi.Click += new System.EventHandler(this.btnUredi_Click);
+            // 
+            // btnUkloni
+            // 
+            this.btnUkloni.BackColor = System.Drawing.Color.Tomato;
+            this.btnUkloni.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnUkloni.Location = new System.Drawing.Point(824, 410);
+            this.btnUkloni.Margin = new System.Windows.Forms.Padding(4);
+            this.btnUkloni.Name = "btnUkloni";
+            this.btnUkloni.Size = new System.Drawing.Size(60, 46);
+            this.btnUkloni.TabIndex = 9;
+            this.btnUkloni.Text = "Ukloni";
+            this.btnUkloni.UseVisualStyleBackColor = false;
+            this.btnUkloni.Click += new System.EventHandler(this.btnUkloni_Click);
+            // 
+            // btnReportProizvodi
+            // 
+            this.btnReportProizvodi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnReportProizvodi.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnReportProizvodi.Location = new System.Drawing.Point(81, 409);
+            this.btnReportProizvodi.Name = "btnReportProizvodi";
+            this.btnReportProizvodi.Size = new System.Drawing.Size(120, 47);
+            this.btnReportProizvodi.TabIndex = 10;
+            this.btnReportProizvodi.Text = "Napravi izvjestaj";
+            this.btnReportProizvodi.UseVisualStyleBackColor = false;
+            this.btnReportProizvodi.Click += new System.EventHandler(this.btnReportProizvodi_Click);
             // 
             // ProizvodID
             // 
@@ -128,72 +202,12 @@ namespace eOrganicShop.WinUI.Proizvodi
             this.Opis.Name = "Opis";
             this.Opis.ReadOnly = true;
             // 
-            // txtPretragaProizvoda
-            // 
-            this.txtPretragaProizvoda.Location = new System.Drawing.Point(81, 49);
-            this.txtPretragaProizvoda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtPretragaProizvoda.Name = "txtPretragaProizvoda";
-            this.txtPretragaProizvoda.Size = new System.Drawing.Size(164, 22);
-            this.txtPretragaProizvoda.TabIndex = 2;
-            this.txtPretragaProizvoda.Enter += new System.EventHandler(this.txtPretragaProizvoda_Enter);
-            this.txtPretragaProizvoda.Leave += new System.EventHandler(this.txtPretragaProizvoda_Leave);
-            // 
-            // btnPretragaProizvoda
-            // 
-            this.btnPretragaProizvoda.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnPretragaProizvoda.Location = new System.Drawing.Point(255, 49);
-            this.btnPretragaProizvoda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnPretragaProizvoda.Name = "btnPretragaProizvoda";
-            this.btnPretragaProizvoda.Size = new System.Drawing.Size(97, 25);
-            this.btnPretragaProizvoda.TabIndex = 3;
-            this.btnPretragaProizvoda.Text = "Traži";
-            this.btnPretragaProizvoda.UseVisualStyleBackColor = true;
-            this.btnPretragaProizvoda.Click += new System.EventHandler(this.btnPretragaProizvoda_Click);
-            // 
-            // btnDodaj
-            // 
-            this.btnDodaj.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnDodaj.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnDodaj.Location = new System.Drawing.Point(689, 410);
-            this.btnDodaj.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnDodaj.Name = "btnDodaj";
-            this.btnDodaj.Size = new System.Drawing.Size(59, 46);
-            this.btnDodaj.TabIndex = 7;
-            this.btnDodaj.Text = "Dodaj";
-            this.btnDodaj.UseVisualStyleBackColor = false;
-            this.btnDodaj.Click += new System.EventHandler(this.btnDodaj_Click);
-            // 
-            // btnUredi
-            // 
-            this.btnUredi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnUredi.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnUredi.Location = new System.Drawing.Point(756, 410);
-            this.btnUredi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnUredi.Name = "btnUredi";
-            this.btnUredi.Size = new System.Drawing.Size(60, 46);
-            this.btnUredi.TabIndex = 8;
-            this.btnUredi.Text = "Uredi";
-            this.btnUredi.UseVisualStyleBackColor = false;
-            this.btnUredi.Click += new System.EventHandler(this.btnUredi_Click);
-            // 
-            // btnUkloni
-            // 
-            this.btnUkloni.BackColor = System.Drawing.Color.Tomato;
-            this.btnUkloni.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnUkloni.Location = new System.Drawing.Point(824, 410);
-            this.btnUkloni.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnUkloni.Name = "btnUkloni";
-            this.btnUkloni.Size = new System.Drawing.Size(60, 46);
-            this.btnUkloni.TabIndex = 9;
-            this.btnUkloni.Text = "Ukloni";
-            this.btnUkloni.UseVisualStyleBackColor = false;
-            this.btnUkloni.Click += new System.EventHandler(this.btnUkloni_Click);
-            // 
             // ProizvodiList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
+            this.Controls.Add(this.btnReportProizvodi);
             this.Controls.Add(this.btnUkloni);
             this.Controls.Add(this.btnUredi);
             this.Controls.Add(this.btnDodaj);
@@ -201,7 +215,7 @@ namespace eOrganicShop.WinUI.Proizvodi
             this.Controls.Add(this.txtPretragaProizvoda);
             this.Controls.Add(this.dgvProizvodi);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ProizvodiList";
             this.Size = new System.Drawing.Size(957, 503);
             this.Load += new System.EventHandler(this.ProizvodiList_Load);
@@ -220,6 +234,7 @@ namespace eOrganicShop.WinUI.Proizvodi
         private System.Windows.Forms.Button btnDodaj;
         private System.Windows.Forms.Button btnUredi;
         private System.Windows.Forms.Button btnUkloni;
+        private System.Windows.Forms.Button btnReportProizvodi;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProizvodID;
         private System.Windows.Forms.DataGridViewTextBoxColumn NazivProizvoda;
         private System.Windows.Forms.DataGridViewTextBoxColumn Sifra;

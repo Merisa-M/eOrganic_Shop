@@ -113,5 +113,11 @@ namespace eOrganicShop.WinUI.Korisnici
                 txtKorisnickoImePretraga.ForeColor = Color.Silver;
             }
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            PanelHelper.SwapPanels(this.Parent, this, new KorisnikReport(dgvKorisnici.DataSource as List<Model.Korisnici>));
+
+        }
     }
 }

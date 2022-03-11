@@ -43,7 +43,7 @@ namespace eOrganicShop.WinUI.Proizvodi
         private async Task LoadData()
         {
             var result = await proizvodiService.Get<List<Model.Proizvodi>>(null);
-            var subcategories = await vrsteproizvodiService.Get<List<Model.VrsteProizvoda>>(null);
+            var vrste = await vrsteproizvodiService.Get<List<Model.VrsteProizvoda>>(null);
 
             dgvProizvodi.AutoGenerateColumns = false;
             dgvProizvodi.ReadOnly = true;
@@ -114,6 +114,12 @@ namespace eOrganicShop.WinUI.Proizvodi
                 }
                 PanelHelper.SwapPanels(this.Parent, this, new ProizvodiList(_korisnik, _proizvod));
             }
+        }
+
+        private void btnReportProizvodi_Click(object sender, EventArgs e)
+        {
+            PanelHelper.SwapPanels(this.Parent, this, new ProizvodiReport(dgvProizvodi.DataSource as List<Model.Proizvodi>));
+
         }
     }
 }

@@ -31,5 +31,15 @@ namespace eOrganicShop.WinUI.Properties {
                 return ((string)(this["APIUrl"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.;Initial Catalog=150254;Integrated Security=True")]
+        public string eOrganicShopConnectionString {
+            get {
+                return ((string)(this["eOrganicShopConnectionString"]));
+            }
+        }
     }
 }

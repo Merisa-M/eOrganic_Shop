@@ -40,22 +40,25 @@
       <HintPath>..\packages\Flurl.Http.3.2.0\lib\net472\Flurl.Http.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1404.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1404.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1404.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1404.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.ReportViewer.WebDesign, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1404.0\lib\net40\Microsoft.ReportViewer.WebDesign.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1404.0\lib\net40\Microsoft.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
@@ -85,16 +88,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="APIService.cs" />
-    <Compile Include="EOrganicDataSet.Designer.cs">
+    <Compile Include="DataSetKorisnik.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>EOrganicDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+      <DependentUpon>DataSetKorisnik.xsd</DependentUpon>
     </Compile>
     <Compile Include="Helper\ImageHelper.cs" />
     <Compile Include="Helper\PanelHelper.cs" />
@@ -172,6 +169,12 @@
     <Compile Include="Proizvodi\ProizvodiList.Designer.cs">
       <DependentUpon>ProizvodiList.cs</DependentUpon>
     </Compile>
+    <Compile Include="Proizvodi\ProizvodiReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Proizvodi\ProizvodiReport.Designer.cs">
+      <DependentUpon>ProizvodiReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="Transakcije\TransakcijeList.cs">
@@ -179,6 +182,12 @@
     </Compile>
     <Compile Include="Transakcije\TransakcijeList.Designer.cs">
       <DependentUpon>TransakcijeList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VrsteProizvoda\ProizvodiPoVrsti.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VrsteProizvoda\ProizvodiPoVrsti.Designer.cs">
+      <DependentUpon>ProizvodiPoVrsti.cs</DependentUpon>
     </Compile>
     <Compile Include="VrsteProizvoda\vrsteProizvodaAdd.cs">
       <SubType>UserControl</SubType>
@@ -198,6 +207,9 @@
     <Compile Include="VrsteProizvoda\VrsteProizvodaList.Designer.cs">
       <DependentUpon>VrsteProizvodaList.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Izvjestaji\KorisnikReport.rdlc" />
+    <EmbeddedResource Include="Izvjestaji\ProizvodiIzvjestaj.rdlc" />
+    <EmbeddedResource Include="Izvjestaji\ProizvodiPoVrstiReport.rdlc" />
     <EmbeddedResource Include="Korisnici\KorisniciList.resx">
       <DependentUpon>KorisniciList.cs</DependentUpon>
     </EmbeddedResource>
@@ -234,6 +246,9 @@
     <EmbeddedResource Include="Proizvodi\ProizvodiList.resx">
       <DependentUpon>ProizvodiList.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Proizvodi\ProizvodiReport.resx">
+      <DependentUpon>ProizvodiReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -247,6 +262,9 @@
     <EmbeddedResource Include="Transakcije\TransakcijeList.resx">
       <DependentUpon>TransakcijeList.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="VrsteProizvoda\ProizvodiPoVrsti.resx">
+      <DependentUpon>ProizvodiPoVrsti.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VrsteProizvoda\vrsteProizvodaAdd.resx">
       <DependentUpon>vrsteProizvodaAdd.cs</DependentUpon>
     </EmbeddedResource>
@@ -256,18 +274,21 @@
     <EmbeddedResource Include="VrsteProizvoda\VrsteProizvodaList.resx">
       <DependentUpon>VrsteProizvodaList.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="EOrganicDataSet.xsc">
-      <DependentUpon>EOrganicDataSet.xsd</DependentUpon>
+    <None Include="DataSetKorisnik.xsc">
+      <DependentUpon>DataSetKorisnik.xsd</DependentUpon>
     </None>
-    <None Include="EOrganicDataSet.xsd">
-      <SubType>Designer</SubType>
+    <None Include="DataSetKorisnik.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>EOrganicDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>DataSetKorisnik.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </None>
-    <None Include="EOrganicDataSet.xss">
-      <DependentUpon>EOrganicDataSet.xsd</DependentUpon>
+    <None Include="DataSetKorisnik.xss">
+      <DependentUpon>DataSetKorisnik.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\eOrganicShop.Model.ViewModel.KorisnikListVM.datasource" />
+    <None Include="Properties\DataSources\eOrganicShop.Model.ViewModel.ProizvodiListVM.datasource" />
+    <None Include="Properties\DataSources\eOrganicShop.Model.ViewModel.TransakcijeListVM.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -282,16 +303,16 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\eOrganicShop.Model\eOrganicShop.Model.csproj">
-      <Project>{5A24F304-1C5D-4C05-AD15-F8F1E32B3E74}</Project>
-      <Name>eOrganicShop.Model</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Reports\" />
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="SqlServerTypes\readme.htm" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\eOrganicShop.Model\eOrganicShop.Model.csproj">
+      <Project>{5a24f304-1c5d-4c05-ad15-f8f1e32b3e74}</Project>
+      <Name>eOrganicShop.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

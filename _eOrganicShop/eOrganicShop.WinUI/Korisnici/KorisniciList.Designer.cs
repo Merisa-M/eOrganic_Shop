@@ -42,6 +42,7 @@ namespace eOrganicShop.WinUI.Korisnici
             this.btnUkloni = new System.Windows.Forms.Button();
             this.btnDodaj = new System.Windows.Forms.Button();
             this.btnUredi = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKorisnici)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,10 +60,12 @@ namespace eOrganicShop.WinUI.Korisnici
             this.KorisnickoIme,
             this.telefon,
             this.Mail});
-            this.dgvKorisnici.Location = new System.Drawing.Point(42, 77);
+            this.dgvKorisnici.Location = new System.Drawing.Point(56, 95);
+            this.dgvKorisnici.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvKorisnici.Name = "dgvKorisnici";
             this.dgvKorisnici.ReadOnly = true;
-            this.dgvKorisnici.Size = new System.Drawing.Size(548, 244);
+            this.dgvKorisnici.RowHeadersWidth = 51;
+            this.dgvKorisnici.Size = new System.Drawing.Size(731, 300);
             this.dgvKorisnici.TabIndex = 0;
             this.dgvKorisnici.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKorisnici_CellContentClick);
             // 
@@ -70,6 +73,7 @@ namespace eOrganicShop.WinUI.Korisnici
             // 
             this.KorisnikID.DataPropertyName = "KorisnikID";
             this.KorisnikID.HeaderText = "KorisnikID";
+            this.KorisnikID.MinimumWidth = 6;
             this.KorisnikID.Name = "KorisnikID";
             this.KorisnikID.ReadOnly = true;
             this.KorisnikID.Visible = false;
@@ -78,6 +82,7 @@ namespace eOrganicShop.WinUI.Korisnici
             // 
             this.Ime.DataPropertyName = "Ime";
             this.Ime.HeaderText = "Ime";
+            this.Ime.MinimumWidth = 6;
             this.Ime.Name = "Ime";
             this.Ime.ReadOnly = true;
             // 
@@ -85,6 +90,7 @@ namespace eOrganicShop.WinUI.Korisnici
             // 
             this.Prezime.DataPropertyName = "Prezime";
             this.Prezime.HeaderText = "Prezime";
+            this.Prezime.MinimumWidth = 6;
             this.Prezime.Name = "Prezime";
             this.Prezime.ReadOnly = true;
             // 
@@ -92,6 +98,7 @@ namespace eOrganicShop.WinUI.Korisnici
             // 
             this.KorisnickoIme.DataPropertyName = "KorisnickoIme";
             this.KorisnickoIme.HeaderText = "Korisničko ime";
+            this.KorisnickoIme.MinimumWidth = 6;
             this.KorisnickoIme.Name = "KorisnickoIme";
             this.KorisnickoIme.ReadOnly = true;
             // 
@@ -99,6 +106,7 @@ namespace eOrganicShop.WinUI.Korisnici
             // 
             this.telefon.DataPropertyName = "Telefon";
             this.telefon.HeaderText = "Telefon";
+            this.telefon.MinimumWidth = 6;
             this.telefon.Name = "telefon";
             this.telefon.ReadOnly = true;
             // 
@@ -106,6 +114,7 @@ namespace eOrganicShop.WinUI.Korisnici
             // 
             this.Mail.DataPropertyName = "Email";
             this.Mail.HeaderText = "Email";
+            this.Mail.MinimumWidth = 6;
             this.Mail.Name = "Mail";
             this.Mail.ReadOnly = true;
             // 
@@ -113,27 +122,30 @@ namespace eOrganicShop.WinUI.Korisnici
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(48, 12);
+            this.label1.Location = new System.Drawing.Point(64, 15);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(90, 24);
+            this.label1.Size = new System.Drawing.Size(115, 29);
             this.label1.TabIndex = 1;
             this.label1.Text = "Korisnici";
             // 
             // txtKorisnickoImePretraga
             // 
             this.txtKorisnickoImePretraga.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.txtKorisnickoImePretraga.Location = new System.Drawing.Point(217, 41);
+            this.txtKorisnickoImePretraga.Location = new System.Drawing.Point(289, 50);
+            this.txtKorisnickoImePretraga.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtKorisnickoImePretraga.Name = "txtKorisnickoImePretraga";
-            this.txtKorisnickoImePretraga.Size = new System.Drawing.Size(173, 20);
+            this.txtKorisnickoImePretraga.Size = new System.Drawing.Size(229, 22);
             this.txtKorisnickoImePretraga.TabIndex = 2;
             this.txtKorisnickoImePretraga.Enter += new System.EventHandler(this.txtKorisnickoImePretraga_Enter);
             this.txtKorisnickoImePretraga.Leave += new System.EventHandler(this.txtKorisnickoImePretraga_Leave);
             // 
             // btnPretraga
             // 
-            this.btnPretraga.Location = new System.Drawing.Point(408, 38);
+            this.btnPretraga.Location = new System.Drawing.Point(544, 47);
+            this.btnPretraga.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnPretraga.Name = "btnPretraga";
-            this.btnPretraga.Size = new System.Drawing.Size(74, 25);
+            this.btnPretraga.Size = new System.Drawing.Size(99, 31);
             this.btnPretraga.TabIndex = 3;
             this.btnPretraga.Text = "Traži";
             this.btnPretraga.UseVisualStyleBackColor = true;
@@ -143,9 +155,10 @@ namespace eOrganicShop.WinUI.Korisnici
             // 
             this.btnUkloni.BackColor = System.Drawing.Color.Tomato;
             this.btnUkloni.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnUkloni.Location = new System.Drawing.Point(545, 327);
+            this.btnUkloni.Location = new System.Drawing.Point(727, 402);
+            this.btnUkloni.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnUkloni.Name = "btnUkloni";
-            this.btnUkloni.Size = new System.Drawing.Size(45, 37);
+            this.btnUkloni.Size = new System.Drawing.Size(60, 46);
             this.btnUkloni.TabIndex = 4;
             this.btnUkloni.Text = "Ukloni";
             this.btnUkloni.UseVisualStyleBackColor = false;
@@ -155,9 +168,10 @@ namespace eOrganicShop.WinUI.Korisnici
             // 
             this.btnDodaj.BackColor = System.Drawing.Color.CornflowerBlue;
             this.btnDodaj.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnDodaj.Location = new System.Drawing.Point(443, 327);
+            this.btnDodaj.Location = new System.Drawing.Point(591, 402);
+            this.btnDodaj.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDodaj.Name = "btnDodaj";
-            this.btnDodaj.Size = new System.Drawing.Size(45, 37);
+            this.btnDodaj.Size = new System.Drawing.Size(60, 46);
             this.btnDodaj.TabIndex = 5;
             this.btnDodaj.Text = "Dodaj";
             this.btnDodaj.UseVisualStyleBackColor = false;
@@ -167,19 +181,33 @@ namespace eOrganicShop.WinUI.Korisnici
             // 
             this.btnUredi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnUredi.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnUredi.Location = new System.Drawing.Point(494, 327);
+            this.btnUredi.Location = new System.Drawing.Point(659, 402);
+            this.btnUredi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnUredi.Name = "btnUredi";
-            this.btnUredi.Size = new System.Drawing.Size(45, 37);
+            this.btnUredi.Size = new System.Drawing.Size(60, 46);
             this.btnUredi.TabIndex = 6;
             this.btnUredi.Text = "Uredi";
             this.btnUredi.UseVisualStyleBackColor = false;
             this.btnUredi.Click += new System.EventHandler(this.btnUredi_Click);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button1.Location = new System.Drawing.Point(56, 402);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(123, 46);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "Napravi izvjestaj";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // KorisniciList
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnUredi);
             this.Controls.Add(this.btnDodaj);
             this.Controls.Add(this.btnUkloni);
@@ -187,8 +215,9 @@ namespace eOrganicShop.WinUI.Korisnici
             this.Controls.Add(this.txtKorisnickoImePretraga);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvKorisnici);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "KorisniciList";
-            this.Size = new System.Drawing.Size(756, 472);
+            this.Size = new System.Drawing.Size(1008, 581);
             this.Load += new System.EventHandler(this.KorisniciList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvKorisnici)).EndInit();
             this.ResumeLayout(false);
@@ -211,5 +240,6 @@ namespace eOrganicShop.WinUI.Korisnici
         private System.Windows.Forms.DataGridViewTextBoxColumn KorisnickoIme;
         private System.Windows.Forms.DataGridViewTextBoxColumn telefon;
         private System.Windows.Forms.DataGridViewTextBoxColumn Mail;
+        private System.Windows.Forms.Button button1;
     }
 }

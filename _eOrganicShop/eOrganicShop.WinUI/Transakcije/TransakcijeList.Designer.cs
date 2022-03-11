@@ -40,8 +40,6 @@ namespace eOrganicShop.WinUI.Transakcije
             this.KorisnikID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cbKorisnici = new System.Windows.Forms.ComboBox();
             this.btnUkloni = new System.Windows.Forms.Button();
-            this.btnTrazi = new System.Windows.Forms.Button();
-            this.txtTraziBroj = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTransakcije)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,7 +47,7 @@ namespace eOrganicShop.WinUI.Transakcije
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(347, 25);
+            this.label1.Location = new System.Drawing.Point(370, 22);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(124, 25);
@@ -152,29 +150,10 @@ namespace eOrganicShop.WinUI.Transakcije
             this.btnUkloni.UseVisualStyleBackColor = false;
             this.btnUkloni.Click += new System.EventHandler(this.btnUkloni_Click);
             // 
-            // btnTrazi
-            // 
-            this.btnTrazi.Location = new System.Drawing.Point(830, 52);
-            this.btnTrazi.Name = "btnTrazi";
-            this.btnTrazi.Size = new System.Drawing.Size(75, 26);
-            this.btnTrazi.TabIndex = 12;
-            this.btnTrazi.Text = "Traži";
-            this.btnTrazi.UseVisualStyleBackColor = true;
-            this.btnTrazi.Click += new System.EventHandler(this.btnTrazi_Click);
-            // 
-            // txtTraziBroj
-            // 
-            this.txtTraziBroj.Location = new System.Drawing.Point(687, 54);
-            this.txtTraziBroj.Name = "txtTraziBroj";
-            this.txtTraziBroj.Size = new System.Drawing.Size(128, 22);
-            this.txtTraziBroj.TabIndex = 13;
-            // 
             // TransakcijeList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.txtTraziBroj);
-            this.Controls.Add(this.btnTrazi);
             this.Controls.Add(this.btnUkloni);
             this.Controls.Add(this.cbKorisnici);
             this.Controls.Add(this.dgvTransakcije);
@@ -202,7 +181,5 @@ namespace eOrganicShop.WinUI.Transakcije
         private System.Windows.Forms.DataGridViewTextBoxColumn BrojNarudzbe;
         private System.Windows.Forms.DataGridViewTextBoxColumn NarudzbaID;
         private System.Windows.Forms.DataGridViewTextBoxColumn KorisnikID;
-        private System.Windows.Forms.Button btnTrazi;
-        private System.Windows.Forms.TextBox txtTraziBroj;
     }
 }

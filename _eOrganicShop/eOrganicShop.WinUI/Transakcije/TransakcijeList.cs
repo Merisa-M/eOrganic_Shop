@@ -99,18 +99,8 @@ namespace eOrganicShop.WinUI.Transakcije
 
         }
 
-        private async void btnTrazi_Click(object sender, EventArgs e)
-        {
-            var search = txtTraziBroj.Text;
-            if (search.StartsWith("Enter"))
-            {
-                search = "";
-            }
-            var request = new TransakcijeSearchRequest()
-            {
-                BrojNarudzbe = search
-            };
-            await LoadList(request);
-        }
+        
+    
+    
     }
 }

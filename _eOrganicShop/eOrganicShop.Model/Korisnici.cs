@@ -13,6 +13,5 @@ namespace eOrganicShop.Model
         public string KorisnickoIme { get; set; }
         public byte[] Image { get; set; }
         public ICollection<KorisnikUloge> KorisnikUloge { get; set; }
-        //  public virtual ICollection<Review> Review { get; set; }
     }
 }

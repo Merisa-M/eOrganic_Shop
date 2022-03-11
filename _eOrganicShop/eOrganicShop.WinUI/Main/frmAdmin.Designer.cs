@@ -32,19 +32,18 @@ namespace eOrganicShop.WinUI.Main
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAdmin));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnMojRacun = new System.Windows.Forms.Button();
-            this.btnReports = new System.Windows.Forms.Button();
             this.btnTransaction = new System.Windows.Forms.Button();
             this.btnProducts = new System.Windows.Forms.Button();
             this.btnCategories = new System.Windows.Forms.Button();
             this.btnUser = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnMinimized = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnOdjava = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.ContentPanel = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -54,15 +53,15 @@ namespace eOrganicShop.WinUI.Main
             // 
             this.panel1.BackColor = System.Drawing.Color.Linen;
             this.panel1.Controls.Add(this.btnMojRacun);
-            this.panel1.Controls.Add(this.btnReports);
             this.panel1.Controls.Add(this.btnTransaction);
             this.panel1.Controls.Add(this.btnProducts);
             this.panel1.Controls.Add(this.btnCategories);
             this.panel1.Controls.Add(this.btnUser);
             this.panel1.Controls.Add(this.btnHome);
-            this.panel1.Location = new System.Drawing.Point(1, 73);
+            this.panel1.Location = new System.Drawing.Point(1, 90);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(166, 372);
+            this.panel1.Size = new System.Drawing.Size(221, 458);
             this.panel1.TabIndex = 0;
             // 
             // btnMojRacun
@@ -70,34 +69,24 @@ namespace eOrganicShop.WinUI.Main
             this.btnMojRacun.BackColor = System.Drawing.Color.Linen;
             this.btnMojRacun.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnMojRacun.ForeColor = System.Drawing.Color.DimGray;
-            this.btnMojRacun.Location = new System.Drawing.Point(-3, 58);
+            this.btnMojRacun.Location = new System.Drawing.Point(-4, 94);
+            this.btnMojRacun.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnMojRacun.Name = "btnMojRacun";
-            this.btnMojRacun.Size = new System.Drawing.Size(169, 42);
+            this.btnMojRacun.Size = new System.Drawing.Size(225, 52);
             this.btnMojRacun.TabIndex = 7;
             this.btnMojRacun.Text = "Moj račun";
             this.btnMojRacun.UseVisualStyleBackColor = false;
             this.btnMojRacun.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // btnReports
-            // 
-            this.btnReports.BackColor = System.Drawing.Color.Linen;
-            this.btnReports.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnReports.ForeColor = System.Drawing.Color.DimGray;
-            this.btnReports.Location = new System.Drawing.Point(0, 298);
-            this.btnReports.Name = "btnReports";
-            this.btnReports.Size = new System.Drawing.Size(166, 42);
-            this.btnReports.TabIndex = 6;
-            this.btnReports.Text = "Reports";
-            this.btnReports.UseVisualStyleBackColor = false;
             // 
             // btnTransaction
             // 
             this.btnTransaction.BackColor = System.Drawing.Color.Linen;
             this.btnTransaction.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnTransaction.ForeColor = System.Drawing.Color.DimGray;
-            this.btnTransaction.Location = new System.Drawing.Point(0, 250);
+            this.btnTransaction.Location = new System.Drawing.Point(-4, 350);
+            this.btnTransaction.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnTransaction.Name = "btnTransaction";
-            this.btnTransaction.Size = new System.Drawing.Size(166, 42);
+            this.btnTransaction.Size = new System.Drawing.Size(221, 52);
             this.btnTransaction.TabIndex = 5;
             this.btnTransaction.Text = "Transakcije";
             this.btnTransaction.UseVisualStyleBackColor = false;
@@ -108,9 +97,10 @@ namespace eOrganicShop.WinUI.Main
             this.btnProducts.BackColor = System.Drawing.Color.Linen;
             this.btnProducts.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnProducts.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.btnProducts.Location = new System.Drawing.Point(0, 202);
+            this.btnProducts.Location = new System.Drawing.Point(-4, 274);
+            this.btnProducts.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnProducts.Name = "btnProducts";
-            this.btnProducts.Size = new System.Drawing.Size(166, 42);
+            this.btnProducts.Size = new System.Drawing.Size(221, 52);
             this.btnProducts.TabIndex = 4;
             this.btnProducts.Text = "Proizvodi";
             this.btnProducts.UseVisualStyleBackColor = false;
@@ -121,9 +111,10 @@ namespace eOrganicShop.WinUI.Main
             this.btnCategories.BackColor = System.Drawing.Color.Linen;
             this.btnCategories.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnCategories.ForeColor = System.Drawing.Color.DimGray;
-            this.btnCategories.Location = new System.Drawing.Point(0, 154);
+            this.btnCategories.Location = new System.Drawing.Point(-4, 214);
+            this.btnCategories.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCategories.Name = "btnCategories";
-            this.btnCategories.Size = new System.Drawing.Size(166, 42);
+            this.btnCategories.Size = new System.Drawing.Size(221, 52);
             this.btnCategories.TabIndex = 3;
             this.btnCategories.Text = "Vrste proizvoda";
             this.btnCategories.UseVisualStyleBackColor = false;
@@ -134,9 +125,10 @@ namespace eOrganicShop.WinUI.Main
             this.btnUser.BackColor = System.Drawing.Color.Linen;
             this.btnUser.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnUser.ForeColor = System.Drawing.Color.DimGray;
-            this.btnUser.Location = new System.Drawing.Point(0, 106);
+            this.btnUser.Location = new System.Drawing.Point(0, 154);
+            this.btnUser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnUser.Name = "btnUser";
-            this.btnUser.Size = new System.Drawing.Size(166, 42);
+            this.btnUser.Size = new System.Drawing.Size(221, 52);
             this.btnUser.TabIndex = 2;
             this.btnUser.Text = "Korisnici";
             this.btnUser.UseVisualStyleBackColor = false;
@@ -147,9 +139,10 @@ namespace eOrganicShop.WinUI.Main
             this.btnHome.BackColor = System.Drawing.Color.Linen;
             this.btnHome.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnHome.ForeColor = System.Drawing.Color.DimGray;
-            this.btnHome.Location = new System.Drawing.Point(-3, 3);
+            this.btnHome.Location = new System.Drawing.Point(-4, 26);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(166, 42);
+            this.btnHome.Size = new System.Drawing.Size(221, 52);
             this.btnHome.TabIndex = 0;
             this.btnHome.Text = "Home";
             this.btnHome.UseVisualStyleBackColor = false;
@@ -164,17 +157,31 @@ namespace eOrganicShop.WinUI.Main
             this.panel2.Controls.Add(this.btnOdjava);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(1, 1);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(873, 72);
+            this.panel2.Size = new System.Drawing.Size(1164, 89);
             this.panel2.TabIndex = 1;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(4, -14);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(203, 121);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
             // 
             // btnMinimized
             // 
             this.btnMinimized.BackColor = System.Drawing.Color.Linen;
             this.btnMinimized.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnMinimized.Location = new System.Drawing.Point(814, 0);
+            this.btnMinimized.Location = new System.Drawing.Point(1085, 0);
+            this.btnMinimized.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnMinimized.Name = "btnMinimized";
-            this.btnMinimized.Size = new System.Drawing.Size(31, 29);
+            this.btnMinimized.Size = new System.Drawing.Size(41, 36);
             this.btnMinimized.TabIndex = 3;
             this.btnMinimized.Text = "-";
             this.btnMinimized.UseVisualStyleBackColor = false;
@@ -184,9 +191,10 @@ namespace eOrganicShop.WinUI.Main
             // 
             this.btnClose.BackColor = System.Drawing.Color.Linen;
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnClose.Location = new System.Drawing.Point(842, 0);
+            this.btnClose.Location = new System.Drawing.Point(1123, 0);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(31, 29);
+            this.btnClose.Size = new System.Drawing.Size(41, 36);
             this.btnClose.TabIndex = 2;
             this.btnClose.Text = "X";
             this.btnClose.UseVisualStyleBackColor = false;
@@ -195,9 +203,10 @@ namespace eOrganicShop.WinUI.Main
             // btnOdjava
             // 
             this.btnOdjava.BackColor = System.Drawing.Color.Linen;
-            this.btnOdjava.Location = new System.Drawing.Point(775, 37);
+            this.btnOdjava.Location = new System.Drawing.Point(1033, 46);
+            this.btnOdjava.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnOdjava.Name = "btnOdjava";
-            this.btnOdjava.Size = new System.Drawing.Size(84, 29);
+            this.btnOdjava.Size = new System.Drawing.Size(112, 36);
             this.btnOdjava.TabIndex = 1;
             this.btnOdjava.Text = "Odjava";
             this.btnOdjava.UseVisualStyleBackColor = false;
@@ -208,41 +217,33 @@ namespace eOrganicShop.WinUI.Main
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label1.Location = new System.Drawing.Point(171, 22);
+            this.label1.Location = new System.Drawing.Point(228, 27);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(163, 29);
+            this.label1.Size = new System.Drawing.Size(201, 36);
             this.label1.TabIndex = 0;
             this.label1.Text = " Organic shop";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // ContentPanel
             // 
-            this.ContentPanel.Location = new System.Drawing.Point(162, 73);
+            this.ContentPanel.Location = new System.Drawing.Point(216, 90);
+            this.ContentPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ContentPanel.Name = "ContentPanel";
-            this.ContentPanel.Size = new System.Drawing.Size(834, 478);
+            this.ContentPanel.Size = new System.Drawing.Size(1112, 588);
             this.ContentPanel.TabIndex = 2;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(3, -11);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(152, 98);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
             // 
             // frmAdmin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(872, 444);
+            this.ClientSize = new System.Drawing.Size(1163, 546);
             this.Controls.Add(this.ContentPanel);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
@@ -261,7 +262,6 @@ namespace eOrganicShop.WinUI.Main
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnHome;
-        private System.Windows.Forms.Button btnReports;
         private System.Windows.Forms.Button btnTransaction;
         private System.Windows.Forms.Button btnProducts;
         private System.Windows.Forms.Button btnCategories;
