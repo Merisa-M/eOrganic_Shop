@@ -78,6 +78,7 @@ namespace eOrganicShop.Service
             var NarudzbeStavke = await _context.NarudzbaStavke.Where(i => i.Proizvod.VrstaProizvodaID == vrsta.VrsteProizvodaID).ToListAsync();
             var review = await _context.Review.Where(i => i.Proizvod.VrstaProizvodaID == vrsta.VrsteProizvodaID).ToListAsync();
             var rate = await _context.Rate.Where(i => i.Proizvod.VrstaProizvodaID == vrsta.VrsteProizvodaID).ToListAsync();
+            var favoriti = await _context.Favoriti.Where(i => i.Proizvod.VrstaProizvodaID == vrsta.VrsteProizvodaID).ToListAsync();
 
             if (vrsta != null)
             {
@@ -91,6 +92,8 @@ namespace eOrganicShop.Service
 
                     if (review.Count > 0)
                         _context.Review.RemoveRange(review);
+                    if (favoriti.Count > 0)
+                        _context.Favoriti.RemoveRange(favoriti);
                 }
                 _context.VrsteProizvoda.Remove(vrsta);
                 await _context.SaveChangesAsync();

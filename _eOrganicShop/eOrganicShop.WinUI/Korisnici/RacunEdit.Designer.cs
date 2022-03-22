@@ -54,18 +54,20 @@ namespace eOrganicShop.WinUI.Korisnici
             // 
             // pbSlika
             // 
-            this.pbSlika.Location = new System.Drawing.Point(23, 30);
+            this.pbSlika.Location = new System.Drawing.Point(31, 37);
+            this.pbSlika.Margin = new System.Windows.Forms.Padding(4);
             this.pbSlika.Name = "pbSlika";
-            this.pbSlika.Size = new System.Drawing.Size(209, 213);
+            this.pbSlika.Size = new System.Drawing.Size(279, 262);
             this.pbSlika.TabIndex = 0;
             this.pbSlika.TabStop = false;
             this.pbSlika.Click += new System.EventHandler(this.pbSlika_Click);
             // 
             // btnUcitajSliku
             // 
-            this.btnUcitajSliku.Location = new System.Drawing.Point(69, 249);
+            this.btnUcitajSliku.Location = new System.Drawing.Point(92, 306);
+            this.btnUcitajSliku.Margin = new System.Windows.Forms.Padding(4);
             this.btnUcitajSliku.Name = "btnUcitajSliku";
-            this.btnUcitajSliku.Size = new System.Drawing.Size(130, 38);
+            this.btnUcitajSliku.Size = new System.Drawing.Size(173, 47);
             this.btnUcitajSliku.TabIndex = 1;
             this.btnUcitajSliku.Text = "Ucitaj sliku";
             this.btnUcitajSliku.UseVisualStyleBackColor = true;
@@ -75,9 +77,10 @@ namespace eOrganicShop.WinUI.Korisnici
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(300, 45);
+            this.label1.Location = new System.Drawing.Point(400, 55);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(30, 16);
+            this.label1.Size = new System.Drawing.Size(36, 20);
             this.label1.TabIndex = 2;
             this.label1.Text = "Ime";
             // 
@@ -85,9 +88,10 @@ namespace eOrganicShop.WinUI.Korisnici
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label2.Location = new System.Drawing.Point(300, 77);
+            this.label2.Location = new System.Drawing.Point(400, 95);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 16);
+            this.label2.Size = new System.Drawing.Size(71, 20);
             this.label2.TabIndex = 3;
             this.label2.Text = "Prezime";
             // 
@@ -95,9 +99,10 @@ namespace eOrganicShop.WinUI.Korisnici
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label3.Location = new System.Drawing.Point(303, 194);
+            this.label3.Location = new System.Drawing.Point(404, 239);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(95, 16);
+            this.label3.Size = new System.Drawing.Size(119, 20);
             this.label3.TabIndex = 4;
             this.label3.Text = "Korisnicko ime";
             // 
@@ -105,9 +110,10 @@ namespace eOrganicShop.WinUI.Korisnici
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label4.Location = new System.Drawing.Point(303, 117);
+            this.label4.Location = new System.Drawing.Point(404, 144);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(42, 16);
+            this.label4.Size = new System.Drawing.Size(51, 20);
             this.label4.TabIndex = 5;
             this.label4.Text = "Email";
             // 
@@ -115,62 +121,77 @@ namespace eOrganicShop.WinUI.Korisnici
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label5.Location = new System.Drawing.Point(303, 154);
+            this.label5.Location = new System.Drawing.Point(404, 190);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(54, 16);
+            this.label5.Size = new System.Drawing.Size(64, 20);
             this.label5.TabIndex = 6;
             this.label5.Text = "Telefon";
             // 
             // txtIme
             // 
-            this.txtIme.Location = new System.Drawing.Point(429, 41);
+            this.txtIme.Location = new System.Drawing.Point(572, 50);
+            this.txtIme.Margin = new System.Windows.Forms.Padding(4);
             this.txtIme.Name = "txtIme";
-            this.txtIme.Size = new System.Drawing.Size(187, 20);
+            this.txtIme.Size = new System.Drawing.Size(248, 22);
             this.txtIme.TabIndex = 7;
+            this.txtIme.Validating += new System.ComponentModel.CancelEventHandler(this.txtIme_Validating);
             // 
             // txtPrezime
             // 
-            this.txtPrezime.Location = new System.Drawing.Point(429, 73);
+            this.txtPrezime.Location = new System.Drawing.Point(572, 90);
+            this.txtPrezime.Margin = new System.Windows.Forms.Padding(4);
             this.txtPrezime.Name = "txtPrezime";
-            this.txtPrezime.Size = new System.Drawing.Size(187, 20);
+            this.txtPrezime.Size = new System.Drawing.Size(248, 22);
             this.txtPrezime.TabIndex = 8;
+            this.txtPrezime.Validating += new System.ComponentModel.CancelEventHandler(this.txtPrezime_Validating);
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(429, 113);
+            this.txtEmail.Location = new System.Drawing.Point(572, 139);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(187, 20);
+            this.txtEmail.Size = new System.Drawing.Size(248, 22);
             this.txtEmail.TabIndex = 9;
+            this.txtEmail.Validating += new System.ComponentModel.CancelEventHandler(this.txtEmail_Validating);
             // 
             // txtTelefon
             // 
-            this.txtTelefon.Location = new System.Drawing.Point(429, 154);
+            this.txtTelefon.Location = new System.Drawing.Point(572, 190);
+            this.txtTelefon.Margin = new System.Windows.Forms.Padding(4);
             this.txtTelefon.Name = "txtTelefon";
-            this.txtTelefon.Size = new System.Drawing.Size(187, 20);
+            this.txtTelefon.Size = new System.Drawing.Size(248, 22);
             this.txtTelefon.TabIndex = 10;
+            this.txtTelefon.TextChanged += new System.EventHandler(this.txtTelefon_TextChanged);
+            this.txtTelefon.Validating += new System.ComponentModel.CancelEventHandler(this.txtTelefon_Validating);
             // 
             // txtKorisnickoIme
             // 
-            this.txtKorisnickoIme.Location = new System.Drawing.Point(429, 190);
+            this.txtKorisnickoIme.Location = new System.Drawing.Point(572, 234);
+            this.txtKorisnickoIme.Margin = new System.Windows.Forms.Padding(4);
             this.txtKorisnickoIme.Name = "txtKorisnickoIme";
-            this.txtKorisnickoIme.Size = new System.Drawing.Size(187, 20);
+            this.txtKorisnickoIme.Size = new System.Drawing.Size(248, 22);
             this.txtKorisnickoIme.TabIndex = 11;
+            this.txtKorisnickoIme.TextChanged += new System.EventHandler(this.txtKorisnickoIme_TextChanged);
+            this.txtKorisnickoIme.Validating += new System.ComponentModel.CancelEventHandler(this.txtKorisnickoIme_Validating);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label6.Location = new System.Drawing.Point(303, 238);
+            this.label6.Location = new System.Drawing.Point(404, 293);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(54, 16);
+            this.label6.Size = new System.Drawing.Size(67, 20);
             this.label6.TabIndex = 12;
             this.label6.Text = "Lozinka";
             // 
             // btnLozinka
             // 
-            this.btnLozinka.Location = new System.Drawing.Point(373, 227);
+            this.btnLozinka.Location = new System.Drawing.Point(497, 279);
+            this.btnLozinka.Margin = new System.Windows.Forms.Padding(4);
             this.btnLozinka.Name = "btnLozinka";
-            this.btnLozinka.Size = new System.Drawing.Size(130, 38);
+            this.btnLozinka.Size = new System.Drawing.Size(173, 47);
             this.btnLozinka.TabIndex = 13;
             this.btnLozinka.Text = "Promijeni lozinku";
             this.btnLozinka.UseVisualStyleBackColor = true;
@@ -178,9 +199,10 @@ namespace eOrganicShop.WinUI.Korisnici
             // 
             // btnOdustani
             // 
-            this.btnOdustani.Location = new System.Drawing.Point(430, 328);
+            this.btnOdustani.Location = new System.Drawing.Point(550, 414);
+            this.btnOdustani.Margin = new System.Windows.Forms.Padding(4);
             this.btnOdustani.Name = "btnOdustani";
-            this.btnOdustani.Size = new System.Drawing.Size(90, 38);
+            this.btnOdustani.Size = new System.Drawing.Size(120, 47);
             this.btnOdustani.TabIndex = 14;
             this.btnOdustani.Text = "Odustani";
             this.btnOdustani.UseVisualStyleBackColor = true;
@@ -188,9 +210,10 @@ namespace eOrganicShop.WinUI.Korisnici
             // 
             // btnSacuvaj
             // 
-            this.btnSacuvaj.Location = new System.Drawing.Point(526, 328);
+            this.btnSacuvaj.Location = new System.Drawing.Point(700, 414);
+            this.btnSacuvaj.Margin = new System.Windows.Forms.Padding(4);
             this.btnSacuvaj.Name = "btnSacuvaj";
-            this.btnSacuvaj.Size = new System.Drawing.Size(90, 38);
+            this.btnSacuvaj.Size = new System.Drawing.Size(120, 47);
             this.btnSacuvaj.TabIndex = 15;
             this.btnSacuvaj.Text = "Spasi";
             this.btnSacuvaj.UseVisualStyleBackColor = true;
@@ -199,10 +222,12 @@ namespace eOrganicShop.WinUI.Korisnici
             // clbUloge
             // 
             this.clbUloge.FormattingEnabled = true;
-            this.clbUloge.Location = new System.Drawing.Point(430, 271);
+            this.clbUloge.Location = new System.Drawing.Point(497, 334);
+            this.clbUloge.Margin = new System.Windows.Forms.Padding(4);
             this.clbUloge.Name = "clbUloge";
-            this.clbUloge.Size = new System.Drawing.Size(186, 34);
+            this.clbUloge.Size = new System.Drawing.Size(247, 72);
             this.clbUloge.TabIndex = 16;
+            this.clbUloge.Validating += new System.ComponentModel.CancelEventHandler(this.clbUloge_Validating);
             // 
             // errorProvider1
             // 
@@ -210,7 +235,7 @@ namespace eOrganicShop.WinUI.Korisnici
             // 
             // RacunEdit
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.clbUloge);
             this.Controls.Add(this.btnSacuvaj);
@@ -229,8 +254,9 @@ namespace eOrganicShop.WinUI.Korisnici
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnUcitajSliku);
             this.Controls.Add(this.pbSlika);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "RacunEdit";
-            this.Size = new System.Drawing.Size(722, 474);
+            this.Size = new System.Drawing.Size(963, 583);
             this.Load += new System.EventHandler(this.RacunEdit_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbSlika)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();

@@ -22,6 +22,8 @@ namespace eOrganicShop.Model.Request
 
         public byte[] Image { get; set; }
         public List<int> Uloge { get; set; } = new List<int>();
-  
+        public List<int> UlogeBrisanje { get; set; } = new List<int>();
+
+
     }
 }

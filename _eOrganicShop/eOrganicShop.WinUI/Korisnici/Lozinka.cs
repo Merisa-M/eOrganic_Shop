@@ -1,6 +1,7 @@
 ﻿using eOrganicShop.Model.Request;
 using eOrganicShop.WinUI.Helper;
 using eOrganicShop.WinUI.Main;
+using eOrganicShop.WinUI.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,6 +9,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -50,13 +52,13 @@ namespace eOrganicShop.WinUI.Korisnici
                 }
                 else
                 {
-                    MessageBox.Show("Lozinka nije ispravna!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Vasa trenutna lozinka nije ispravna!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
                 if (txtNovaLozinka.Text != txtPotvrdiLozinku.Text)
                 {
-                    MessageBox.Show("Passwords do not match!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Lozinke se ne podudaraju!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
@@ -77,6 +79,52 @@ namespace eOrganicShop.WinUI.Korisnici
         {
             PanelHelper.SwapPanels(this.Parent, this, new KorisnikEdit(_ID));
 
+        }
+
+        private void txtNovaLozinka_Validating(object sender, CancelEventArgs e)
+        {
+            var hasNumber = new Regex(@"[0-9]+");
+            var hasUpperChar = new Regex(@"[A-Z]+");
+            var hasMinimum8Chars = new Regex(@".{8,}");
+            if (string.IsNullOrWhiteSpace(txtNovaLozinka.Text))
+            {
+                errorProvider1.SetError(txtNovaLozinka, Resources.Validation_RequiredField);
+                e.Cancel = true;
+            }
+            else
+            {
+                if (hasNumber.IsMatch(txtNovaLozinka.Text) && hasUpperChar.IsMatch(txtNovaLozinka.Text) && hasMinimum8Chars.IsMatch(txtNovaLozinka.Text))
+                {
+                    errorProvider1.SetError(txtNovaLozinka, null);
+                }
+                else
+                {
+                    errorProvider1.SetError(txtNovaLozinka, "Lozinka mora da ima mala, velika slova, brojeve i minimalno 8 karaktera!");
+                    e.Cancel = true;
+
+                }
+            }
+        }
+
+        private void txtPotvrdiLozinku_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtPotvrdiLozinku.Text))
+            {
+                errorProvider1.SetError(txtPotvrdiLozinku, Resources.Validation_RequiredField);
+                e.Cancel = true;
+            }
+            else
+            {
+                if (txtPotvrdiLozinku.Text == txtPotvrdiLozinku.Text)
+                {
+                    errorProvider1.SetError(txtPotvrdiLozinku, null);
+                }
+                else
+                {
+                    errorProvider1.SetError(txtPotvrdiLozinku, "Lozinke se ne podudaraju");
+                    e.Cancel = true;
+                }
+            }
         }
     }
 }

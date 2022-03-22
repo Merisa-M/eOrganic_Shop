@@ -90,11 +90,11 @@ namespace eOrganicShop.Service
 
             foreach (var UlogeID in request.Uloge)
             {
-                var userRole = await _context.KorisnikUloge
+                var korisnikUloge = await _context.KorisnikUloge
                     .Where(i => i.UlogeID == UlogeID && i.KorisnikID == ID)
                     .SingleOrDefaultAsync();
 
-                if (userRole == null)
+                if (korisnikUloge == null)
                 {
                     var novaU = new KorisnikUloge()
                     {
@@ -104,7 +104,17 @@ namespace eOrganicShop.Service
                     await _context.Set<KorisnikUloge>().AddAsync(novaU);
                 }
             }
+            foreach (var UlogeID in request.UlogeBrisanje)
+            {
+                var korisnikUloge = await _context.KorisnikUloge
+                    .Where(i => i.UlogeID == UlogeID && i.KorisnikID == ID)
+                    .SingleOrDefaultAsync();
 
+                if (korisnikUloge != null)
+                {
+                    _context.Set<KorisnikUloge>().Remove(korisnikUloge);
+                }
+            }
 
 
             _mapper.Map(request, entity);
