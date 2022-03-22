@@ -49,19 +49,19 @@ namespace eOgranicShop.Mobile.Views
                    string.IsNullOrWhiteSpace(Email.Text) || string.IsNullOrWhiteSpace(Telefon.Text)
                    || string.IsNullOrWhiteSpace(KorisnickoIme.Text))
                 {
-                    await Application.Current.MainPage.DisplayAlert("Error", "All fields are required.", "Try again");
+                    await Application.Current.MainPage.DisplayAlert("Greska", "Sva polja su obavezna.", "Pokusaj ponovo");
                     return;
                 }
 
                 if (KorisnickoIme.Text.Length < 3)
                 {
-                    await Application.Current.MainPage.DisplayAlert("Error", "Username must have minimum 3 characthers.", "Try again");
+                    await Application.Current.MainPage.DisplayAlert("Greska", "Korisnicko ime mora imate najmanje 3 slova.", "Pokusaj ponovo");
                     return;
                 }
                 bool isValid = Regex.IsMatch(Email.Text, emailPattern);
                 if (!isValid)
                 {
-                    await Application.Current.MainPage.DisplayAlert("Error", "Please enter email in a valid format.", "Try again");
+                    await Application.Current.MainPage.DisplayAlert("Greska", "Molim napisite mail u ispravnom formatu.", "Pokušaj ponovo");
                     return;
                 }
 
@@ -70,14 +70,14 @@ namespace eOgranicShop.Mobile.Views
                 {
                     if (KorisnickoIme.Text == item.KorisnickoIme && APIService.Username != item.KorisnickoIme)
                     {
-                        await Application.Current.MainPage.DisplayAlert("Error", "Username already exist.", "Try again");
+                        await Application.Current.MainPage.DisplayAlert("Greska", "Korisnicko ime je zauzeto.", "Pokusaj ponovo");
                         return;
                     }
                 }
 
                 if (IsDigitsOnly(Telefon.Text) == false)
                 {
-                    await Application.Current.MainPage.DisplayAlert("Error", "You cant use letters as a phone number.", "Try again");
+                    await Application.Current.MainPage.DisplayAlert("Greska", "Mozete koristiti samo brojeve za Vas telefon.", "Pokusaj ponovo");
                     return;
                 }
 

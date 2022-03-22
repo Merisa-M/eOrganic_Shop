@@ -112,7 +112,66 @@ namespace eOrganicShop.Service
 
             return _mapper.Map<Model.Korisnici>(entity);
         }
+        public override async Task<bool> Delete(int ID)
+        {
+            var entity = await _context.Korisnici.
+                Include(i => i.KorisnikUloge).Include(i=>i.Review).Include(i=>i.Rate).
+                FirstOrDefaultAsync(i => i.KorisnikID == ID);
 
+
+            if (entity.KorisnikUloge.Count != 0)
+                _context.KorisnikUloge.RemoveRange(entity.KorisnikUloge);
+
+            if (entity.Review.Count != 0)
+                _context.Review.RemoveRange(entity.Review);
+            if (entity.Rate.Count != 0)
+                _context.Rate.RemoveRange(entity.Rate);
+
+
+            var rate = await _context.Rate.Where(i => i.KorisnikID == ID).ToListAsync();
+            if (rate.Count > 0)
+            {
+                _context.Rate.RemoveRange(rate);
+            }
+            var review = await _context.Review.Where(i => i.KorisnikID == ID).ToListAsync();
+            if (review.Count > 0)
+            {
+                _context.Review.RemoveRange(review);
+            }
+
+            var favoriti = await _context.Favoriti.Where(i => i.KorisnikID == ID).ToListAsync();
+            if (favoriti.Count > 0)
+            {
+                _context.Favoriti.RemoveRange(favoriti);
+            }
+            var transakcije = await _context.Transakcije.Where(i => i.KorisnikID == ID).ToListAsync();
+            if (transakcije.Count > 0)
+            {
+                _context.Transakcije.RemoveRange(transakcije);
+            }
+            var narudzbe = await _context.Narudzba.Where(i => i.KorisnikID == ID).ToListAsync();
+            if (narudzbe.Count > 0)
+            {
+                _context.Narudzba.RemoveRange(narudzbe);
+            }
+            var kupovine = await _context.Kupovine.Where(i => i.KorisnikID == ID).ToListAsync();
+            if (kupovine.Count > 0)
+            {
+                _context.Kupovine.RemoveRange(kupovine);
+            }
+            var narudzbes = await _context.NarudzbaStavke.Where(i => i.Narudzba.KorisnikID == ID).ToListAsync();
+            if (narudzbes.Count > 0)
+            {
+                _context.NarudzbaStavke.RemoveRange(narudzbes);
+            }
+            await _context.SaveChangesAsync();
+
+
+            _context.Korisnici.Remove(entity);
+            await _context.SaveChangesAsync();
+
+            return true;
+        }
 
         public async Task<List<Model.Proizvodi>> GetLikedProizvodi(int ID, ProizvodiSearchRequest request)
         {

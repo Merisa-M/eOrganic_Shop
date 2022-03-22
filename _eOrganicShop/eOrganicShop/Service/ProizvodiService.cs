@@ -77,8 +77,21 @@ namespace eOrganicShop.Service
             if (proizvod != null)
             {
 
-                await _context.SaveChangesAsync();
+                var favoriti = await _context.Favoriti.Where(i => i.ProizvodID == ID).ToListAsync();
+                if (favoriti != null)
+                    _context.Favoriti.RemoveRange(favoriti);
 
+                var review = await _context.Review.Where(i => i.ProizvodID == ID).ToListAsync();
+                if (review != null)
+                    _context.Review.RemoveRange(review);
+
+                var narudzbes = await _context.NarudzbaStavke.Where(i => i.ProizvodId == ID).ToListAsync();
+                if (narudzbes != null)
+                    _context.NarudzbaStavke.RemoveRange(narudzbes);
+                var rate = await _context.Rate.Where(i => i.ProizvodID == ID).ToListAsync();
+                if (rate != null)
+                    _context.Rate.RemoveRange(rate);
+                await _context.SaveChangesAsync();
 
                 _context.Proizvodi.Remove(proizvod);
                 await _context.SaveChangesAsync();

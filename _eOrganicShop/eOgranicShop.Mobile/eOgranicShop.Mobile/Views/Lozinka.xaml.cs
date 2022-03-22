@@ -33,32 +33,32 @@ namespace eOgranicShop.Mobile.Views
 
                 if (TrenutnaLozinka.Text != APIService.Password)
                 {
-                    await Application.Current.MainPage.DisplayAlert("Error", "Pogresna lozinka.", "Try again");
+                    await Application.Current.MainPage.DisplayAlert("Greska", "Pogresna lozinka.", "Pokusaj ponovo");
                     return;
                 }
 
                 if (PotvrdiLozinku.Text != NovaLozinka.Text)
                 {
-                    await Application.Current.MainPage.DisplayAlert("Error", "Lozinke se ne poklapaju.", "Try again");
+                    await Application.Current.MainPage.DisplayAlert("Greska", "Lozinke se ne poklapaju.", "Pokusaj ponovo");
                     return;
                 }
 
                 if (NovaLozinka.Text.Length < 8)
                 {
-                    await Application.Current.MainPage.DisplayAlert("Error", "Lozinka mora imati najmanje 8 karaktera.", "Try again");
+                    await Application.Current.MainPage.DisplayAlert("Greska", "Lozinka mora imati najmanje 8 karaktera.", "Pokusaj ponovo");
                     return;
                 }
 
                 if (!hasNumber.IsMatch(NovaLozinka.Text) || !hasUpperChar.IsMatch(NovaLozinka.Text) || !hasMinimum8Chars.IsMatch(NovaLozinka.Text))
                 {
-                    await Application.Current.MainPage.DisplayAlert("Error", "Password must contain number, uppercase, lowercase and minimum 8 characters!", "Try again");
+                    await Application.Current.MainPage.DisplayAlert("Greska", "Lozinka mora da ima brojeve, velika i mala slova i najmanje 8 karaktera!", "Pokusaj ponovo");
                     return;
                 }
 
 
                 if (!hasNumber.IsMatch(PotvrdiLozinku.Text) || !hasUpperChar.IsMatch(PotvrdiLozinku.Text) || !hasMinimum8Chars.IsMatch(PotvrdiLozinku.Text))
                 {
-                    await Application.Current.MainPage.DisplayAlert("Error", "Password must contain number, uppercase, lowercase and minimum 8 characters!", "Try again");
+                    await Application.Current.MainPage.DisplayAlert("Greska", "Lozinka mora da ima brojeve, velika i mala slova i najmanje 8 karaktera!", "Pokusaj ponovo");
                     return;
                 }
 

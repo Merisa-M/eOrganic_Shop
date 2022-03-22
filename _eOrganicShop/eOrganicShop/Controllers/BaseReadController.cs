@@ -21,11 +21,13 @@ namespace eOrganicShop.Controllers
         }
        
         [HttpGet]
+        [Authorize]
         public async Task<List<T>> Get([FromQuery] Tsearch search)
         {
             return await _service.Get(search);
         }
         [HttpGet("{ID}")]
+        [Authorize]
         public async Task<T> GetById(int ID)
         {
             return await _service.GetById(ID);

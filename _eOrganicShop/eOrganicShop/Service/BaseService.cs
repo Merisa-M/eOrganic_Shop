@@ -17,6 +17,7 @@ namespace eOrganicShop.Service
             _context = context;
             _mapper = mapper;
         }
+
         public virtual async Task<List<TModel>> Get(TSearch search)
         {
             var list = await _context.Set<TDatabase>().ToListAsync();

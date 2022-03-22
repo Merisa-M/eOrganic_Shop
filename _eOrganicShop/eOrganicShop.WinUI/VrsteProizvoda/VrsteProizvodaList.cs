@@ -60,7 +60,7 @@ namespace eOrganicShop.WinUI.VrsteProizvoda
                 bool result = false;
                 int ID = Convert.ToInt32(dgvVrsteProizvoda.CurrentRow.Cells["VrsteProizvodaID"].Value);
 
-                if (MessageBox.Show("DA li ste sigurni?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show("Da li ste sigurni?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
 
                     result = await vrsteProizvodaService.Delete<dynamic>(ID);

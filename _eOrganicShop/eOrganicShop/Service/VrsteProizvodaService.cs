@@ -74,9 +74,24 @@ namespace eOrganicShop.Service
         public override async Task<bool> Delete(int ID)
         {
             var vrsta = await _context.VrsteProizvoda.Where(i => i.VrsteProizvodaID == ID).FirstOrDefaultAsync();
+            var proizvod = await _context.Proizvodi.Where(i => i.VrstaProizvodaID == vrsta.VrsteProizvodaID).ToListAsync();
+            var NarudzbeStavke = await _context.NarudzbaStavke.Where(i => i.Proizvod.VrstaProizvodaID == vrsta.VrsteProizvodaID).ToListAsync();
+            var review = await _context.Review.Where(i => i.Proizvod.VrstaProizvodaID == vrsta.VrsteProizvodaID).ToListAsync();
+            var rate = await _context.Rate.Where(i => i.Proizvod.VrstaProizvodaID == vrsta.VrsteProizvodaID).ToListAsync();
 
             if (vrsta != null)
             {
+                if (proizvod.Count > 0)
+                {
+                    _context.Proizvodi.RemoveRange(proizvod);
+                    if (NarudzbeStavke.Count > 0)
+                      _context.NarudzbaStavke.RemoveRange(NarudzbeStavke);
+                    if (rate.Count > 0)
+                        _context.Rate.RemoveRange(rate);
+
+                    if (review.Count > 0)
+                        _context.Review.RemoveRange(review);
+                }
                 _context.VrsteProizvoda.Remove(vrsta);
                 await _context.SaveChangesAsync();
 
