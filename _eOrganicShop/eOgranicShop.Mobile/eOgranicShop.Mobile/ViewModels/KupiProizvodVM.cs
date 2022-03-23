@@ -243,7 +243,7 @@ namespace eOgranicShop.Mobile.ViewModels
                             KorisnikID = korisnik.KorisnikID,
                             Cijena = Iznos,
                             KorisnickoIme = korisnik.KorisnickoIme,
-                            NazivProizovda = narudzba.BrojNarudzbe,
+                            BrojNarudzbe = narudzba.BrojNarudzbe,
                             StripeId = stripeToken.Id
                         };
 

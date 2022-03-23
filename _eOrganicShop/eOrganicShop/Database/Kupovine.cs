@@ -15,7 +15,7 @@ namespace eOrganicShop.Database
         public DateTime DatumKupovine { get; set; }
         public float Cijena { get; set; }
         public string KorisnickoIme { get; set; }
-        public string NazivProizovda { get; set; }
+        public string BrojNarudzbe { get; set; }
         public virtual Korisnici Korisnik { get; set; }
         public virtual Narudzba Narudzba { get; set; }
         public string StripeId { get; set; }
