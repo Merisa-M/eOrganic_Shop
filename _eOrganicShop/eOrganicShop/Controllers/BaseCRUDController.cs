@@ -32,7 +32,6 @@ namespace eOrganicShop.Controllers
         }
         [HttpDelete("{ID}")]
         [Authorize(Roles = "Admin")]
-
         public async Task<bool> Delete(int ID)
         {
             return await _service.Delete(ID);
